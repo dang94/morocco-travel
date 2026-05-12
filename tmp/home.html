@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#00391d",
+                    "outline-variant": "#43474f",
+                    "on-tertiary-fixed-variant": "#00522d",
+                    "surface-container": "#1e2023",
+                    "background": "#121317",
+                    "surface-tint": "#a7c8ff",
+                    "surface-container-low": "#1a1c1f",
+                    "on-background": "#e2e2e7",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-tertiary-fixed": "#002101",
+                    "on-tertiary-container": "#38b06e",
+                    "inverse-primary": "#3a5f94",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e2e2e7",
+                    "surface-container-lowest": "#0c0e12",
+                    "secondary-fixed-dim": "#7ed99e",
+                    "surface-bright": "#38393d",
+                    "surface-container-highest": "#333539",
+                    "primary": "#a7c8ff",
+                    "tertiary-container": "#003c1f",
+                    "tertiary": "#69dd96",
+                    "on-primary": "#003061",
+                    "on-secondary-container": "#94f0b2",
+                    "primary-fixed": "#d5e3ff",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2f3034",
+                    "surface": "#121317",
+                    "on-surface-variant": "#c3c6d1",
+                    "surface-dim": "#121317",
+                    "on-secondary-fixed": "#00210f",
+                    "on-secondary-fixed-variant": "#00522d",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#003366",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-container-high": "#282a2e",
+                    "tertiary-fixed": "#86fab0",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#9af6b8",
+                    "on-primary-fixed": "#001b3c",
+                    "secondary": "#7ed99e",
+                    "on-primary-container": "#799dd6",
+                    "surface-variant": "#333539",
+                    "inverse-surface": "#e2e2e7",
+                    "tertiary-fixed-dim": "#69dd96",
+                    "secondary-container": "#00703f",
+                    "on-secondary": "#00391d",
+                    "outline": "#8d919a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "container-padding": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "data-display": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "data-display": ["64px", {"lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "300"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .geometric-overlay {
+            background-image: radial-gradient(circle at 2px 2px, rgba(126, 217, 158, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(30, 32, 35, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(167, 200, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-secondary/20 flex justify-between items-center px-container-padding py-stack-md">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+</div>
+</header>
+<main class="pt-[72px] pb-32">
+<!-- Hero Section: Casablanca Context -->
+<section class="relative h-[530px] flex flex-col justify-end px-container-padding pb-stack-lg overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hassan II Mosque" class="w-full h-full object-cover" data-alt="A grand, cinematic view of the Hassan II Mosque in Casablanca at sunrise, its minaret piercing the soft morning mist. The Atlantic Ocean waves crash gently against the stone foundation in the foreground. The lighting is ethereal and high-contrast, with deep oceanic blues in the shadows and vibrant golden light hitting the intricate stone carvings. The aesthetic is premium and travel-focused, reflecting a sophisticated atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU4r2DYnFIoSYzEYfI5cTvbg_ItZU8bGXSP1fVs5fFJuDdR1egT4UP_x-I3fMW6Z1Jnz_gD51GPUfn4CQSd0QnDKDw7E0VyxhFMAEAtkRMLEALUbthHPpZeKBT6JV10c8DxVLta6kzEA9CVBgzWYValJVlbSwOsTOfzpRGASWtNGvKK1AOyc1bvWyf_YscUmXTFzDB7ofQBe5Ti3t-Aly4zpCkJWDQmAu73wBSpHEuPgTpSj0srvhB8Gmrdl6oHV6XME9jsO4qmaE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute inset-0 geometric-overlay opacity-30"></div>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="location_on">location_on</span>
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.2em]">CURRENT LOCATION</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-1">Casablanca</h1>
+<div class="flex items-baseline gap-4">
+<span class="font-data-display text-data-display text-primary">24°C</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary">Sunny</span>
+<span class="font-body-md text-on-surface-variant">RealFeel 26°</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weather Insights Bento Grid -->
+<section class="px-container-padding mt-stack-lg space-y-stack-md">
+<div class="grid grid-cols-2 gap-stack-md">
+<!-- Wind Speed -->
+<div class="glass-card rounded-xl p-stack-md relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-[48px]" data-icon="air">air</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline-variant block mb-2">WIND</span>
+<span class="font-headline-md text-headline-md text-on-surface">18 km/h</span>
+<span class="font-body-md text-secondary block">NW Gusty</span>
+</div>
+<!-- Humidity -->
+<div class="glass-card rounded-xl p-stack-md relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-[48px]" data-icon="humidity_mid">humidity_mid</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline-variant block mb-2">HUMIDITY</span>
+<span class="font-headline-md text-headline-md text-on-surface">62%</span>
+<span class="font-body-md text-secondary block">Optimal</span>
+</div>
+</div>
+<!-- 5-Day Outlook Glass Card -->
+<div class="glass-card rounded-xl p-stack-md border-t-2 border-secondary/30">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">5-Day Outlook</h2>
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="space-y-4">
+<!-- Day 1 (Today) -->
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/20">
+<span class="font-body-md text-on-surface w-20">Today</span>
+<span class="material-symbols-outlined text-secondary" data-icon="wb_sunny">wb_sunny</span>
+<div class="flex gap-4 w-24 justify-end">
+<span class="font-body-md font-bold text-on-surface">24°</span>
+<span class="font-body-md text-on-surface-variant">16°</span>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/20">
+<span class="font-body-md text-on-surface-variant w-20">Mon</span>
+<span class="material-symbols-outlined text-secondary" data-icon="partly_cloudy_day">partly_cloudy_day</span>
+<div class="flex gap-4 w-24 justify-end">
+<span class="font-body-md font-bold text-on-surface">22°</span>
+<span class="font-body-md text-on-surface-variant">15°</span>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/20">
+<span class="font-body-md text-on-surface-variant w-20">Tue</span>
+<span class="material-symbols-outlined text-secondary" data-icon="wb_sunny">wb_sunny</span>
+<div class="flex gap-4 w-24 justify-end">
+<span class="font-body-md font-bold text-on-surface">26°</span>
+<span class="font-body-md text-on-surface-variant">17°</span>
+</div>
+</div>
+<!-- Day 4 -->
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/20">
+<span class="font-body-md text-on-surface-variant w-20">Wed</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="cloud">cloud</span>
+<div class="flex gap-4 w-24 justify-end">
+<span class="font-body-md font-bold text-on-surface">21°</span>
+<span class="font-body-md text-on-surface-variant">14°</span>
+</div>
+</div>
+<!-- Day 5 -->
+<div class="flex items-center justify-between py-2">
+<span class="font-body-md text-on-surface-variant w-20">Thu</span>
+<span class="material-symbols-outlined text-secondary" data-icon="wb_sunny">wb_sunny</span>
+<div class="flex gap-4 w-24 justify-end">
+<span class="font-body-md font-bold text-on-surface">25°</span>
+<span class="font-body-md text-on-surface-variant">16°</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lifestyle Suggestion Card -->
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 border-t-2 border-secondary bg-surface-container">
+<!-- Weather Active Tab -->
+<a class="flex flex-col items-center justify-center text-secondary font-semibold scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy">cloudy</span>
+<span class="font-label-caps text-label-caps mt-1">Weather</span>
+</a>
+<!-- Cities Tab -->
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-caps text-label-caps mt-1">Cities</span>
+</a>
+<!-- Tips Tab -->
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span class="font-label-caps text-label-caps mt-1">Tips</span>
+</a>
+</nav>
+</body></html>

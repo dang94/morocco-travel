@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary": "#00391d",
+                  "outline-variant": "#43474f",
+                  "on-tertiary-fixed-variant": "#00522d",
+                  "surface-container": "#1e2023",
+                  "background": "#121317",
+                  "surface-tint": "#a7c8ff",
+                  "surface-container-low": "#1a1c1f",
+                  "on-background": "#e2e2e7",
+                  "on-primary-fixed-variant": "#1f477b",
+                  "on-tertiary-fixed": "#00210f",
+                  "on-tertiary-container": "#38b06e",
+                  "inverse-primary": "#3a5f94",
+                  "error": "#ffb4ab",
+                  "on-surface": "#e2e2e7",
+                  "surface-container-lowest": "#0c0e12",
+                  "secondary-fixed-dim": "#7ed99e",
+                  "surface-bright": "#38393d",
+                  "surface-container-highest": "#333539",
+                  "primary": "#a7c8ff",
+                  "tertiary-container": "#003c1f",
+                  "tertiary": "#69dd96",
+                  "on-primary": "#003061",
+                  "on-secondary-container": "#94f0b2",
+                  "primary-fixed": "#d5e3ff",
+                  "error-container": "#93000a",
+                  "inverse-on-surface": "#2f3034",
+                  "surface": "#121317",
+                  "on-surface-variant": "#c3c6d1",
+                  "surface-dim": "#121317",
+                  "on-secondary-fixed": "#00210f",
+                  "on-secondary-fixed-variant": "#00522d",
+                  "on-error-container": "#ffdad6",
+                  "primary-container": "#003366",
+                  "primary-fixed-dim": "#a7c8ff",
+                  "surface-container-high": "#282a2e",
+                  "tertiary-fixed": "#86fab0",
+                  "on-error": "#690005",
+                  "secondary-fixed": "#9af6b8",
+                  "on-primary-fixed": "#001b3c",
+                  "secondary": "#7ed99e",
+                  "on-primary-container": "#799dd6",
+                  "surface-variant": "#333539",
+                  "inverse-surface": "#e2e2e7",
+                  "tertiary-fixed-dim": "#69dd96",
+                  "secondary-container": "#00703f",
+                  "on-secondary": "#00391d",
+                  "outline": "#8d919a"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "stack-sm": "8px",
+                  "stack-lg": "32px",
+                  "stack-md": "16px",
+                  "unit": "8px",
+                  "gutter": "16px",
+                  "container-padding": "24px"
+          },
+          "fontFamily": {
+                  "headline-lg": ["Montserrat"],
+                  "body-lg": ["Inter"],
+                  "body-md": ["Inter"],
+                  "headline-md": ["Montserrat"],
+                  "display-lg": ["Montserrat"],
+                  "label-caps": ["Inter"],
+                  "data-display": ["Montserrat"]
+          },
+          "fontSize": {
+                  "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                  "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                  "data-display": ["64px", {"lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "300"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .zellij-pattern {
+      background-image: radial-gradient(circle at 2px 2px, rgba(126, 217, 158, 0.05) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .glass-card {
+      background: rgba(30, 32, 35, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen zellij-pattern">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-secondary/20 flex justify-between items-center px-container-padding py-stack-md">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed-dim">MOROCCO TRAVEL</h1>
+</div>
+</header>
+<main class="pt-[88px] pb-[120px] px-container-padding">
+<!-- Header Section -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Explore Cities</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl">Discover the majestic beauty and weather insights of Morocco's most iconic coastal and interior destinations.</p>
+</section>
+<!-- Cities Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Casablanca (Large Anchor) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/30">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="Casablanca Skyline" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide panoramic shot of the Casablanca shoreline at dusk, featuring the magnificent Hassan II Mosque standing over the Atlantic Ocean. The lighting is deep oceanic blue with warm golden glows from the city lights. The overall aesthetic is professional and atmospheric, emphasizing the high-contrast minimalism of the Moroccan coast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlfn_IvJhygJ5IBUmcHlJvPU7GQJL5nYpNVe0psmuW7bKzPxW3CNAM5HPjaYet0W4QGmv6cbE0O14ArpSiH6QnHp8_hp9Qd8zbp98nkQ2f8I1_nBQE1cU4UeXzVihoir1DKIyw38pTVI_xE5xZOSVkKjza-TE9wpSPBb_jXQHj_E9zTiyVCbmbi0-bk6wk3RO21XpG26Bb1hH3HwiuI8NAOYa5_th2cYVTS4OOYsVe0ibILo7hKVzyq97d8NXma3LPK5jTvtgSc78"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg w-full flex justify-between items-end">
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-stack-sm">Casablanca</h3>
+<span class="font-label-caps text-label-caps text-secondary-fixed bg-secondary-container/30 px-stack-sm py-1 rounded-full">Coastal Metropolis</span>
+</div>
+</div>
+</div>
+<!-- Marrakech -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/30">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Marrakech Medina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vibrant view of a Marrakech market alleyway during the golden hour, showing the warm terracotta walls and lush green plants in decorative pots. The scene is illuminated by soft, directional sunlight creating high-contrast shadows. The atmosphere is evocative and premium, capturing the bustling yet serene essence of the Red City." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXvKTKhiUjtyhGpLnHDnPRhtYQoSSA8lsDFwiZVHZgwONDWpdlIcDvNvSQNwbNPPaZalvmckgaVMfoNslGgwbChIazj0VFC-XCp0LUhfljXvdxfcK-OBYDvXMx1mhF2fAFjhnpj3Dm2F21uWE4AC2LXZZbiQKJNH26mxaAkQTlzecmn18GJHf7Q1KIU3YNEPH2sg76ncz_FY8MbsP86qxfAAj8o3RWujdHl9hTeizCqSztlQ8Wn8LS33B6XszKE-L4Pp1bJ6bfOR8"/>
+</div>
+<div class="p-stack-md border-t border-secondary/20">
+<div class="flex justify-between items-start mb-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Marrakech</h3>
+</div>
+</div>
+</div>
+<!-- Fes -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/30">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Fes Medina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An intricate aerial view of the Fes medina rooftops at sunrise, revealing the dense architectural geometry and Zellij patterns of the ancient city. The lighting is a mix of cool morning mist and warm orange sun rays. The style is deeply rooted in the Maghreb landscape, featuring a sophisticated palette of deep blues and earthy neutrals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxzoNikWrnXzZDf17uBl7pQhd9pYy4DXYt5qaCEUmZqXC9t5xo8b6t89cRHD40XsmsfLYcNqUK4KFMvOCqT1fE-cpPm4qMU6-4uqY_wlnxyxuz3zAfvIFMyIlnqqBMOzstu_rR6wN1ulple4yixynEu6Plv0VSvz5tW4IdQB6ciIlLD-T97VE-m5l-HiZJEadbHSC6xF74_Inm9QrICtMwTpt3iflWjgsfX7o6F9Y2DRhQLWAJQa1N45atz6yvAOoyxeJFOiD-I9U"/>
+</div>
+<div class="p-stack-md border-t border-secondary/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Fes</h3>
+</div>
+</div>
+<!-- Chefchaouen -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/30">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Chefchaouen Blue Streets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A tranquil scene from a blue-painted street in Chefchaouen, showcasing various shades of Mediterranean blue on walls and stairs. Lush green potted plants provide a striking contrast against the monochrome blue backdrop. The lighting is soft and diffused, simulating morning mist in the Rif Mountains, creating a serene and technologically advanced feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gVjEnXwSWZTPSKElQXeooZmIfW7QhugzYUfHoWhd3ayXR36cy0lB6KEl8Khrjm3avbVXmxk4hHPb7V12AM29gkQtlMQJfhxjXRhA5BOgCjGIYmuWqtVPnbvwfKIpbFVmsX5vTd1SKYtdBjwsz5o_UAIw__r9HRCmdmWkvRpIIYEw96Gv_u20c9ttKKJL2HIJbvnH_ahI74o-fJzsAIA3Ihhix3-GGD20cRaIJRfpioP_J3ApvpqUro9rvnKLQpJv7O1JyeEqLME"/>
+</div>
+<div class="p-stack-md border-t border-secondary/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Chefchaouen</h3>
+</div>
+</div>
+<!-- Essaouira -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/30">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Essaouira Coast" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="The rugged coastline of Essaouira with traditional blue fishing boats docked in the foreground and the ancient city walls in the distance. The Atlantic ocean waves are captured with high-frequency detail. The lighting is bright and airy with a deep oceanic foundation, reflecting a professional utility aesthetic for travel navigation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE1VkKond8zBy8VZXacjgX95O_q5nFFAVmufRsgrkCzdrh42DWv8KDwn5WQup11atsbK2WN7esmgYcRd6zFjPlGrsvsnXAXWu-nSJshE7CnTNhoYPV0xnWka4QZL1CEiKw74uxkiIwnhnuaBQAqyG57tYxaj7NRd2K4FZ7BjyGNkqrYZd8Bhs9jw6ngVUESW5cn_vhxlCSErqnOZ7XiFazfmTeUV0soNgNXSWGDdM7ogp0BhEuhMUDLKlMavX3mTYBqbWgF3Jp10"/>
+</div>
+<div class="p-stack-md border-t border-secondary/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Essaouira</h3>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 border-t-2 border-secondary bg-surface-container">
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy">cloudy</span>
+<span class="font-label-caps text-label-caps">Weather</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary font-semibold scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-caps text-label-caps">Cities</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span class="font-label-caps text-label-caps">Tips</span>
+</a>
+</nav>
+</body></html>

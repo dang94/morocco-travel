@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .zellige-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 25 25 5-25 5-5 25-5-25L0 30l25-5z' fill='%23F4A460' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .glass-card {
+            background: rgba(26, 29, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 164, 96, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#b1c5ff",
+                        "secondary": "#ffb4a5",
+                        "surface-container-lowest": "#0c0e12",
+                        "surface-bright": "#37393e",
+                        "on-primary-fixed-variant": "#00419e",
+                        "on-tertiary-container": "#ffaa86",
+                        "on-secondary-fixed": "#3e0500",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "inverse-surface": "#e2e2e8",
+                        "outline": "#8d909e",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-container": "#802918",
+                        "on-primary": "#002c70",
+                        "surface-container-highest": "#333539",
+                        "on-tertiary": "#581e00",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb4a5",
+                        "on-surface": "#e2e2e8",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-surface-variant": "#c3c6d5",
+                        "on-secondary-container": "#ff9a85",
+                        "surface-container": "#1e2024",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary-container": "#0047ab",
+                        "outline-variant": "#434653",
+                        "surface": "#111317",
+                        "on-primary-fixed": "#001946",
+                        "surface-variant": "#333539",
+                        "inverse-primary": "#2559bd",
+                        "surface-container-high": "#282a2e",
+                        "secondary-fixed": "#ffdad3",
+                        "on-background": "#e2e2e8",
+                        "tertiary-container": "#7f3916",
+                        "primary-fixed": "#dae2ff",
+                        "surface-dim": "#111317",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#611205",
+                        "on-secondary-fixed-variant": "#802918",
+                        "on-primary-container": "#a5bdff",
+                        "tertiary": "#ffb596",
+                        "on-tertiary-fixed-variant": "#76320f",
+                        "primary": "#b1c5ff",
+                        "on-surface-variant": "#c3c6d5",
+                        "surface-container-low": "#1a1c20",
+                        "inverse-on-surface": "#2f3035",
+                        "background": "#111317"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-sm": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "label-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md zellige-overlay min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-surface/80 backdrop-blur-md border-b border-secondary/20">
+<div class="flex items-center gap-4">
+<button class="active:opacity-80 active:scale-95 transition-all text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Best Travel Seasons</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:opacity-80 active:scale-95 transition-all text-primary">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="active:opacity-80 active:scale-95 transition-all text-primary">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-4 md:px-margin-desktop max-w-5xl mx-auto space-y-xl">
+<!-- Hero Section -->
+<section class="relative h-[400px] rounded-xl overflow-hidden group">
+<img alt="Moroccan Landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A panoramic wide shot of the Atlas Mountains at sunset, showing rugged peaks glowing in deep terracotta and amber hues. In the foreground, a traditional Moroccan village with earthy red clay architecture sits nestled in a lush green valley. The sky is a gradient of Majorelle blue and dusty rose, creating a sophisticated and atmospheric travel aesthetic. The lighting is cinematic, capturing the raw beauty of North African nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsJnZBVQOtVjl-82AzOi6SbiFdIL5501LSX3jZAW0efYOnGU9h7SxEGmb6sH9E98h8-gQS5aV-YQA3Flnf6UAyOPxY2gDAn8PXHsjY41iRYze1qFnWWFnKVf_6KKoOzxoKi5YywDpM5iiZT8yw7-Hf0AQ4xYMBFVm9tCQVUf8fTjZI6aRYre-4BPXuv7t2yYf94z2CWYYDO6GljGGXh_m-0NmrWbA0O84RSY6yp8q3DksgPbtycE-3YOYSKWhMAxxZbf24yJ6_mDk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-2">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary/20 text-tertiary border border-tertiary/30 font-label-md text-label-md">
+                    TRAVEL TIPS
+                </div>
+<h2 class="font-display-lg text-display-lg text-white max-w-2xl">When to Experience the Magic of Morocco</h2>
+</div>
+</section>
+<!-- Intro Text -->
+<section class="max-w-3xl space-y-md">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Morocco is a land of extremes, from the snow-capped High Atlas to the scorching dunes of the Sahara. Finding the perfect window to visit ensures you witness the kingdom at its most vibrant without the overwhelming intensity of the peak summer sun.
+            </p>
+</section>
+<!-- Seasons Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Spring -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col hover:border-secondary/40 transition-colors">
+<div class="h-56 relative">
+<img alt="Spring in Morocco" class="w-full h-full object-cover" data-alt="A vibrant spring scene in a Moroccan garden, featuring blooming almond trees with soft white and pink blossoms. Intricate blue-tiled zellige fountains are visible in the background, surrounded by lush green citrus trees. The lighting is bright and airy, reflecting a fresh morning atmosphere. The color palette emphasizes Majorelle blue accents against the soft floral tones and deep green foliage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiwL9_ofbzrvJvkIryv6llLc7r1jVf7H2IRZViBpqLC9qVDyXO0zwb_WgRtkJUvi2qjgwyASQVQIrH5E7e3hucLIpIadg7Rb1oSSiXrw_dILwWW3cR4a1ou-mzVFpIuUfFqIsVuWW3wKRznCQ_koMjgC6Iu3biZGyNnWeAFXMGI2wUb3Oa3Ny-irE_-fL3YSH1-auGlPPtshMe9-TkvELRuJ71Tl13Hz5b41ODLs6ZjlsCAS2t2lrRvOH3gjTwOi-PfPVvRpzyZO0"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md">MAR - MAY</div>
+</div>
+<div class="p-6 flex-1 flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Spring Blossoms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The most coveted time. The landscapes are lush and green, with pleasant temperatures perfect for trekking the Atlas or exploring the medinas.</p>
+<div class="mt-auto pt-4 flex items-center text-secondary font-label-lg gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="thermostat">thermostat</span>
+                        18°C - 25°C
+                    </div>
+</div>
+</div>
+<!-- Autumn -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col hover:border-secondary/40 transition-colors">
+<div class="h-56 relative">
+<img alt="Autumn in Marrakesh" class="w-full h-full object-cover" data-alt="A golden hour view of a bustling Marrakesh souk in autumn, with hanging brass lanterns reflecting the warm setting sun. The air is filled with a soft golden haze, highlighting the rich textures of woven rugs and mounds of colorful spices in terracotta bowls. The scene feels cozy and sophisticated, with long shadows stretching across the ancient stone paths. Deep ambers and earthy reds dominate the visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfKDe1XW2VD8wwW7sgB_w3vvc7rrN6eRfBbiSfDFSbnD-cWBrrj1HIK9o0JXgvn7R9lagfhiWUrN2MgyGJkzUdodLp459_I0s9Uz_D9RI01ZXP87-6rop9Vj_VyzidxWi1XnxLpxSDXsaF7nS1NZaJ-vl_zt4MjKdtv9HdRsVLH50xhIJXspqioWjIlVDnFMdbDyEJpLbl8me6TWe8Llsw6fpYDzVl9P3u1P1ovhYgGfw7SE3c2FRbGxWuCU_Hv1yHgKdBxqKUnaU"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-md text-label-md">SEP - NOV</div>
+</div>
+<div class="p-6 flex-1 flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-secondary">Autumn Gold</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">As the summer heat fades, the air clears and the golden hour becomes truly magical. Ideal for Saharan expeditions and coastal retreats.</p>
+<div class="mt-auto pt-4 flex items-center text-secondary font-label-lg gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="thermostat">thermostat</span>
+                        20°C - 28°C
+                    </div>
+</div>
+</div>
+<!-- Winter -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col hover:border-secondary/40 transition-colors md:col-span-2 lg:col-span-1">
+<div class="h-56 relative">
+<img alt="Winter Serenity" class="w-full h-full object-cover" data-alt="A serene winter morning in a luxurious Moroccan riad, where a light dusting of snow covers the distant Atlas mountain peaks visible through a traditional arched window. Inside, a crackling fireplace illuminates a room filled with plush Berber carpets and leather poufs. The mood is tranquil and premium, featuring a palette of deep midnight blue, charcoal, and warm sandy beige highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjdGevsFJrRx0TlRRnQwgf-PszVgGDiTvqP9i_siJEqA3vaBuVnbsE_364j_nNqlVAvAEVr-Qh6gya8cixa4lK3dwMUKWh9kW39ovW5YKwNA9St415vXgE4DcADhV4ycQnBXXkwpFew4BIAiXoSrTHekdh4LECYM-eCdYF9Z2-nY5AJpABU0BfP7qiWcdlU2ndN__O7zu47CP5rTj82PmVrWKlL93zb1aZirI5P212s23LQp0GAIR8q5SeE2qPOu0o2AH2PKPO7nI"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-bright text-on-surface font-label-md text-label-md">DEC - FEB</div>
+</div>
+<div class="p-6 flex-1 flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Winter Serenity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cooler days and crisp nights. Experience the luxury of a fireplace-lit riad or witness the unique sight of snow in the desert dunes.</p>
+<div class="mt-auto pt-4 flex items-center text-secondary font-label-lg gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="thermostat">thermostat</span>
+                        8°C - 18°C
+                    </div>
+</div>
+</div>
+</div>
+<!-- Tip Box -->
+<section class="bg-primary-container/20 border border-primary/30 rounded-xl p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="lightbulb">lightbulb</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+<div class="bg-primary p-3 rounded-lg text-on-primary">
+<span class="material-symbols-outlined" data-icon="tips_and_updates">tips_and_updates</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-primary">Insider Tip: The Ramadan Factor</h4>
+<p class="font-body-md text-body-md text-on-primary-container/80 leading-relaxed max-w-2xl">
+                        Traveling during Ramadan offers a unique cultural perspective, but be prepared for adjusted opening hours and quieter afternoons. The evening 'Iftar' celebrations are a must-see for any food lover.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 border-t-2 border-secondary bg-surface-container">
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy">cloudy</span>
+<span class="font-label-caps text-xs mt-1">Weather</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-secondary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-caps text-xs mt-1">Cities</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary font-semibold scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="font-label-caps text-xs mt-1">Tips</span>
+</a>
+</nav>
+</body></html>

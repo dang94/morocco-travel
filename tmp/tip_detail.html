@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .zellij-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(circle at 2px 2px, rgba(177, 197, 255, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(17, 19, 23, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#111317",
+                        "on-tertiary": "#581e00",
+                        "inverse-surface": "#e2e2e8",
+                        "secondary": "#ffb4a5", /* Terracotta */
+                        "outline-variant": "#434653",
+                        "inverse-on-surface": "#2f3035",
+                        "primary-container": "#0047ab",
+                        "tertiary-container": "#7f3916",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-tertiary-fixed-variant": "#76320f",
+                        "on-primary-fixed": "#001946",
+                        "surface-tint": "#b1c5ff",
+                        "surface": "#111317",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-surface": "#e2e2e8",
+                        "on-primary": "#002c70",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffb596",
+                        "inverse-primary": "#2559bd",
+                        "surface-dim": "#111317",
+                        "surface-container-low": "#1a1c20",
+                        "secondary-fixed": "#ffdad3",
+                        "surface-container": "#1e2024",
+                        "on-background": "#e2e2e8",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#a5bdff",
+                        "on-secondary-fixed": "#3e0500",
+                        "on-secondary-fixed-variant": "#802918",
+                        "surface-variant": "#333539",
+                        "secondary-container": "#802918",
+                        "on-primary-fixed-variant": "#00419e",
+                        "outline": "#8d909e",
+                        "surface-container-high": "#282a2e",
+                        "surface-bright": "#37393e",
+                        "secondary-fixed-dim": "#ffb4a5",
+                        "on-tertiary-container": "#ffaa86",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-container-highest": "#333539",
+                        "surface-container-lowest": "#0c0e12",
+                        "on-secondary-container": "#ff9a85",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#c3c6d5",
+                        "primary-fixed": "#dae2ff",
+                        "primary": "#b1c5ff", /* Majorelle Blue */
+                        "on-secondary": "#611205"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-caps": ["Montserrat"],
+                        "data-display": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "data-display": ["64px", {"lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "300"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md zellij-pattern selection:bg-primary/30">
+<!-- TopAppBar - Simplified with only back arrow as requested -->
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center px-container-padding py-stack-md bg-background/80 backdrop-blur-md border-b border-primary/10">
+<button class="text-primary hover:text-primary-fixed-dim transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="ml-4 font-headline-md text-headline-md font-bold tracking-tight text-primary">MOROCCO TRAVEL</span>
+</nav>
+<!-- Main Content Area -->
+<main class="pt-24 pb-32 max-w-screen-md mx-auto px-container-padding">
+<!-- Header Image & Article Title -->
+<header class="mb-stack-lg">
+<div class="relative w-full h-[350px] rounded-xl overflow-hidden mb-stack-md border border-outline-variant/20 shadow-2xl">
+<img alt="Moroccan Landscape" class="w-full h-full object-cover" data-alt="A breathtaking panoramic view of a Moroccan valley at sunset, featuring the rugged Atlas Mountains in the background. The lighting is warm and golden, casting long shadows across the terraced green fields and traditional terracotta Berber villages. The atmosphere is serene and majestic, utilizing a deep oceanic blue for the sky and lush greens in the vegetation to align with the brand's premium travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGxqYvBL8jASQbiu7j-DfgNRLF3dumIXdYFCGvU2UG2asQD6Uspps0hs7qKY3-2okon8KLYEZ9F9y1DiMpIaXRnhIPH0yd3btKmsZH6jxU-XNZFwWFk-ECJs0IDJh3mFHDsnMYd2IqQSnzyrwjpCmZ3gDIR6LmWbcCB_blRnkYwrngqvCfhTyMHD84b60nu5AVKHzP8gjoXl0EmbCN-QDxhZW3dj18IgJibBtyYATWBxBiIbvwablGXMmTnuX3TwXHuE5sIr570Kc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container text-label-caps font-label-caps rounded">TRAVEL TIPS</span>
+<span class="text-outline text-label-caps font-label-caps">8 MIN READ</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-sm leading-tight">The Best Seasons to Visit Morocco</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic border-l-4 border-primary pl-4">Discover the perfect timing for your Maghreb odyssey, from coastal breezes to Saharan nights.</p>
+</header>
+<!-- Article Body -->
+<article class="space-y-stack-lg text-on-surface-variant leading-relaxed">
+<section class="glass-panel p-container-padding rounded-xl border border-primary/10">
+<p class="font-body-md text-body-md mb-stack-md">
+                    Morocco is a land of sensory overload and geographical diversity. Because it bridges the gap between the Mediterranean, the Atlantic, and the vast Sahara Desert, the "perfect" time to visit depends entirely on where your compass is pointing. Whether you seek the bustling souks of Marrakech or the quiet snow-capped peaks of the High Atlas, understanding the seasonal nuances is vital for any professional traveler.
+                </p>
+</section>
+<!-- Spring Section -->
+<section class="space-y-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="local_florist">local_florist</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Spring: The Golden Window</h2>
+</div>
+<p class="font-body-md text-body-md">
+                    March to May is widely considered the ultimate time to traverse the Moroccan interior. As the winter chill retreats, the landscapes transform into a vibrant tapestry of <span class="text-primary font-semibold">Lush Green</span>. This is the prime season for hikers in the Atlas Mountains, where wildflowers carpet the valleys and temperatures remain a temperate 20°C to 25°C.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Pro Tip with Terracotta (Secondary) -->
+<div class="bg-secondary-container/20 p-stack-md rounded-lg border-l-2 border-secondary">
+<h4 class="font-label-caps text-label-caps text-secondary mb-2 uppercase">PRO TIP</h4>
+<p class="text-sm text-on-surface">April is the peak month for the Rose Festival in El Kelaat M'Gouna. Expect intoxicating scents and vibrant local festivities.</p>
+</div>
+<div class="bg-surface-container-high p-stack-md rounded-lg border-l-2 border-primary">
+<h4 class="font-label-caps text-label-caps text-primary mb-2 uppercase">CROWD NOTE</h4>
+<p class="text-sm text-on-surface">This is the busiest season. We recommend booking your Riads at least four months in advance to secure premium stays.</p>
+</div>
+</div>
+</section>
+<!-- Autumn Section -->
+<section class="space-y-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Autumn: The Desert's Call</h2>
+</div>
+<p class="font-body-md text-body-md">
+                    From September to November, the oppressive heat of the summer desert begins to wane. This is the professional's choice for Saharan expeditions. The days are pleasantly warm, while the nights introduce a refreshing crispness—perfect for sleeping under the stars in Merzouga.
+                </p>
+<div class="relative rounded-xl overflow-hidden h-48 border border-outline-variant/20">
+<img alt="Sahara Dunes" class="w-full h-full object-cover" data-alt="An expansive view of the rolling orange sand dunes of the Sahara Desert under a clear, deep blue twilight sky. The scene is illuminated by the soft, fading light of dusk, creating a tranquil and stable atmosphere. In the distance, a small luxury desert camp glows with warm amber lights, providing a sophisticated contrast against the cool shadows of the dunes, reflecting the brand's 'Quiet Observer' persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUqqsLW50PDWsXczp9La94CxuSfw2LJ8_QSMAR4w2mrEw6T9EENgdu6_bV_u3tiyaU0HB7Na9OLKG08y2DMMV6ESLCtmoswELWIHeZ6szESYR_mh4FaukImX3GiRU5Ik06_paxx5TdxpLBzVrnkWUiJgf-1ae0mXhAAXuMh3r5_Pz5N1pUTb6bLRss8BbYME43BevHt7gm6HdBy4uVlwggp2aEl7QF7aDfL96xkHUGcDN-v20Ojx3vQgpVlGu8-BfX-KOgydceP7w"/>
+<div class="absolute bottom-0 left-0 p-4 glass-panel w-full">
+<p class="text-sm font-semibold text-on-surface">September brings the Imilchil Marriage Festival in the High Atlas.</p>
+</div>
+</div>
+</section>
+<!-- Winter Section -->
+<section class="space-y-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="ac_unit">ac_unit</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Winter: Coastal Serenity</h2>
+</div>
+<p class="font-body-md text-body-md">
+                    December through February can be surprisingly cold in the mountains and cities like Fes. However, this is the secret season for coastal lovers. Cities like Essaouira and Agadir maintain a mild climate. While the Atlantic mist can be heavy, it creates a moody, poetic atmosphere that is perfect for the "Quiet Observer."
+                </p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Fewer tourists in major historical landmarks.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Crisp, clear skies for photography in the Blue City, Chefchaouen.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Lower accommodation rates across high-end boutique hotels.</span>
+</li>
+</ul>
+</section>
+</article>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 bg-surface-container border-t-2 border-primary">
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="cloudy">cloudy</span>
+<span class="font-label-caps text-label-caps mt-1">Weather</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-caps text-label-caps mt-1">Cities</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-semibold transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="font-label-caps text-label-caps mt-1">Tips</span>
+</a>
+</nav>
+</body></html>
